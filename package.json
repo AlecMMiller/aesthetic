@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "lint": "ts-standard --fix",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "semantic-release": "semantic-release --branches main"
   },
   "ts-standard": {
     "ignore": [
