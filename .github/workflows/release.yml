@@ -22,3 +22,5 @@ jobs:
       - run: yarn lint
       - run: yarn build
       - run: yarn semantic-release
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
