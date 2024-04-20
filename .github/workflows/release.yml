@@ -1,14 +1,24 @@
-name: Bump version
+name: Deploy
+
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Bump version and push tag
-        uses: hennejg/github-tag-action@v4.1.jh1
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 20
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn build
+      - run: yarn semantic-release
