@@ -17,12 +17,14 @@ const meta: Meta<typeof Button> = {
       control: { type: 'radio' }
     },
     children: {
-      control: { type: 'text' },
-      defaultValue: 'Foo'
+      control: { type: 'text' }
     },
     disabled: {
       control: { type: 'boolean' }
     }
+  },
+  args: {
+    children: 'Foo'
   }
 }
 
@@ -31,3 +33,4 @@ export default meta
 type Story = StoryObj<typeof Button>
 
 export const Primary: Story = { }
+export const Dark: Story = { parameters: { theme: 'dark' } }

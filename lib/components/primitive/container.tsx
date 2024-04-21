@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 function Container (props: ContainerProps): JSX.Element {
-  const className = 'bg-slate-4 rounded-xl' + (props.className !== undefined ? ` ${props.className}` : '')
+  const className = 'bg-slate-3 rounded-xl' + (props.className !== undefined ? ` ${props.className}` : '')
 
   return <div className={className}>{props.children}</div>
 }

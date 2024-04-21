@@ -7,6 +7,9 @@ const meta: Meta<typeof Switch> = {
     disabled: {
       control: { type: 'boolean' }
     }
+  },
+  args: {
+    'aria-label': 'Switch'
   }
 }
 
@@ -15,3 +18,4 @@ export default meta
 type Story = StoryObj<typeof Switch>
 
 export const Primary: Story = { }
+export const Dark: Story = { parameters: { theme: 'dark' } }
