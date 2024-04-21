@@ -28,7 +28,7 @@ function MultiPage (props: MultiPageProps): JSX.Element {
         <Button variant='ghost' disabled={props.canGoBack !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onBack} aria-label='back'>
           <ChevronLeft size={32} />
         </Button>
-        <Container>
+        <Container className='shadow-xl'>
           {props.children}
         </Container>
         <Button variant='ghost' disabled={props.canGoForward !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onForward} aria-label='forward'>
