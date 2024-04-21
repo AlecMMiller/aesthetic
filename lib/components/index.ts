@@ -1,1 +1,2 @@
-export * from './ui'
+export * from './primitive'
+export * from './component'
