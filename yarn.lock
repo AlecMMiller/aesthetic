@@ -2075,6 +2075,14 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz#719df7fb41766bc143369eaa0dd56d8dc87c9958"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
+"@storybook/addon-a11y@^8.0.8":
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-8.0.8.tgz#efd71fef036ced41482f4bf4139bc13bc756e57e"
+  integrity sha512-QiNzKej1C3QjPBHm8nwk0lqv9N9cLInlyJ62Cp+/+ethcH2elNnBf1H3ad/DC6XIQRyMtvvhCOnzygAMnjCq1w==
+  dependencies:
+    "@storybook/addon-highlight" "8.0.8"
+    axe-core "^4.2.0"
+
 "@storybook/addon-actions@8.0.8":
   version "8.0.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-8.0.8.tgz#0b625b36e738a3b02c25d7b0b0b9f28c4e68c918"
@@ -3740,6 +3748,11 @@ available-typed-arrays@^1.0.7:
   integrity sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==
   dependencies:
     possible-typed-array-names "^1.0.0"
+
+axe-core@^4.2.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.9.0.tgz#b18971494551ab39d4ff5f7d4c6411bd20cc7c2a"
+  integrity sha512-H5orY+M2Fr56DWmMFpMrq5Ge93qjNdPVqzBv5gWK3aD1OvjBEJlEzxf09z93dGVQeI0LiW+aCMIx1QtShC/zUw==
 
 babel-core@^7.0.0-bridge.0:
   version "7.0.0-bridge.0"
