@@ -19,3 +19,4 @@ export default meta
 type Story = StoryObj<typeof Selector>
 
 export const Primary: Story = { }
+export const Dark: Story = { parameters: { theme: 'dark' } }

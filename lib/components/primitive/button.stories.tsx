@@ -33,3 +33,4 @@ export default meta
 type Story = StoryObj<typeof Button>
 
 export const Primary: Story = { }
+export const Dark: Story = { parameters: { theme: 'dark' } }
