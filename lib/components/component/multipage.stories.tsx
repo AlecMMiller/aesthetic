@@ -24,7 +24,9 @@ const meta: Meta<typeof MultiPage> = {
     }
   },
   args: {
-    children: mockContent
+    children: mockContent,
+    pages: 3,
+    currentPage: 1
   }
 }
 
