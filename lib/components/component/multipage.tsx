@@ -25,13 +25,13 @@ function MultiPage (props: MultiPageProps): JSX.Element {
   return (
     <div className={className}>
       <div className='flex items-center'>
-        <Button variant='ghost' disabled={props.canGoBack !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onBack}>
+        <Button variant='ghost' disabled={props.canGoBack !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onBack} aria-label='back'>
           <ChevronLeft size={32} />
         </Button>
         <Container>
           {props.children}
         </Container>
-        <Button variant='ghost' disabled={props.canGoForward !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onForward}>
+        <Button variant='ghost' disabled={props.canGoForward !== true} className='text-slate-11 hover:text-slate-12' onClick={props.onForward} aria-label='forward'>
           <ChevronRight size={32} />
         </Button>
       </div>

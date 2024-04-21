@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '../../utils/cn'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       rounding: {
@@ -13,13 +13,13 @@ const buttonVariants = cva(
         full: 'rounded-full'
       },
       variant: {
-        default: 'bg-slate-9 text-slate-12 hover:bg-slate-10 active:bg-slate-11',
+        default: 'bg-slate-8 text-slate-12 hover:bg-slate-10 active:bg-slate-11',
         destructive:
-          'bg-red-9 text-slate-12 hover:bg-red-10 active:bg-red-11',
+          'bg-red-8 text-slate-12 hover:bg-red-10 active:bg-red-11',
         outline:
           'border border-input border-slate-7 bg-slate-3 hover:bg-accent-slate-4 active:bg-slate-5 text-slate-11 hover:text-slate-12',
         secondary:
-          'bg-blue-9 text-secondary-foreground hover:bg-blue-10 active:bg-blue-11',
+          'bg-blue-7 text-slate-12 hover:bg-blue-10 active:bg-blue-11',
         ghost: '',
         link: 'text-slate-12 underline-offset-4 hover:underline'
       },

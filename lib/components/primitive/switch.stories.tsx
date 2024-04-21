@@ -7,6 +7,9 @@ const meta: Meta<typeof Switch> = {
     disabled: {
       control: { type: 'boolean' }
     }
+  },
+  args: {
+    'aria-label': 'Switch'
   }
 }
 

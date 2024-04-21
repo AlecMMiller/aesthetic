@@ -17,12 +17,14 @@ const meta: Meta<typeof Button> = {
       control: { type: 'radio' }
     },
     children: {
-      control: { type: 'text' },
-      defaultValue: 'Foo'
+      control: { type: 'text' }
     },
     disabled: {
       control: { type: 'boolean' }
     }
+  },
+  args: {
+    children: 'Foo'
   }
 }
 

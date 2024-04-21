@@ -16,10 +16,10 @@ function Option (props: OptionPropsFull): JSX.Element {
   const direction = props.reverse ? 'flex-col-reverse' : 'flex-col'
 
   return (
-    <button className='group hover:bg-slate-5 rounded-xl p-4 flex gap-6 items-center' onClick={props.onClick}>
+    <button className='group hover:bg-slate-4 rounded-xl p-4 flex gap-6 items-center' onClick={props.onClick}>
       <props.icon size={32} className='group-hover:text-blue-9' />
       <div className={`flex ${direction} text-left`}>
-        <div className='text-2xl font-bold text-blue-9'>
+        <div className='text-2xl font-bold text-blue-10'>
           {props.header}
         </div>
         <div className='text-xl text-slate-11'>
