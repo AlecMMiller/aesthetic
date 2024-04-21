@@ -1,9 +1,7 @@
-name: Deploy
+name: Release
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call
 
 jobs:
     build:
@@ -16,7 +14,6 @@ jobs:
           node-version: 20
           cache: 'yarn'
       - run: yarn install
-      - run: yarn lint
       - run: yarn build
       - run: yarn semantic-release
       env: 

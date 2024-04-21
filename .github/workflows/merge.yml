@@ -1,0 +1,12 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+  release:
+    uses: ./.github/workflows/release.yml
