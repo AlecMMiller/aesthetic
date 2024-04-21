@@ -10,3 +10,4 @@ jobs:
     uses: ./.github/workflows/validate.yml
   release:
     uses: ./.github/workflows/release.yml
+    needs: validate
