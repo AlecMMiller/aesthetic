@@ -11,4 +11,6 @@ jobs:
   release:
     uses: ./.github/workflows/release.yml
     needs: validate
-    secrets: inherit
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
