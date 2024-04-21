@@ -30,6 +30,7 @@
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.372.0",
@@ -44,7 +45,6 @@
     "@storybook/addon-essentials": "^8.0.8",
     "@storybook/addon-interactions": "^8.0.8",
     "@storybook/addon-links": "^8.0.8",
-    "@storybook/addon-onboarding": "^8.0.8",
     "@storybook/blocks": "^8.0.8",
     "@storybook/react": "^8.0.8",
     "@storybook/react-vite": "^8.0.8",
