@@ -1,7 +1,7 @@
 import type { Decorator, Preview } from "@storybook/react";
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
-import './globals.css';
+import '../style/global.css';
 
 const withTheme: Decorator = (StoryFn, context) => {
   const theme = context.parameters.theme || context.globals.theme
