@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './lib/**/*.{ts,tsx}'
   ],
+  plugins: [require('tailwindcss-animate')],
   theme: {
     extend: {
       colors: {
