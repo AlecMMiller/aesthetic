@@ -1,2 +1,6 @@
 export { Button } from './button'
 export { Switch } from './switch'
+export { toast } from './use-toast'
+export { Toaster } from './toaster'
+export { Container } from './container'
+export * from './select'

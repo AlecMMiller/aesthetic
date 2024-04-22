@@ -38,7 +38,7 @@ interface SelectorProps {
 function Selector (props: SelectorProps): JSX.Element {
   const options = props.options.map((option) => <Option key={option.header} {...option} reverse={props.reverse ?? false} />)
   return (
-    <Container className='flex flex-col gap-4 h-fit w-96 p-1'>
+    <Container className='flex flex-col gap-4 h-fit w-96 p-1' level='over'>
       {options}
     </Container>
   )
