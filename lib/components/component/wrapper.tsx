@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useMemo, useState } from 'react'
 import { Toaster } from '../primitive'
 
 interface WrapperProps {
@@ -7,24 +7,50 @@ interface WrapperProps {
 
 type Theme = 'dark' | 'light'
 
-const ThemeContext = createContext<Theme>('dark')
+interface ThemeContextFormat {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
 
-function useTheme (): void {
-  const theme = useContext(ThemeContext)
+const ThemeContext = createContext<ThemeContextFormat>(
+  {
+    theme: 'dark',
+    setTheme: () => {}
+  }
+)
+
+export function useTheme (): ThemeContextFormat {
+  return useContext(ThemeContext)
+}
+
+function applyTheme (theme: Theme): void {
+  const root = document.documentElement
 
   if (theme === 'dark') {
-    document.documentElement.classList.add('dark')
+    root.classList.add('dark')
   } else {
-    document.documentElement.classList.remove('dark')
+    root.classList.remove('dark')
   }
 }
 
 export function Wrapper (props: WrapperProps): JSX.Element {
-  useTheme()
+  const [theme, setTheme] = useState<Theme>('dark')
+  const value = useMemo(
+    () => ({
+      theme,
+      setTheme
+    }),
+    [theme]
+  )
+
+  applyTheme(theme)
+
   return (
-    <div className='w-full h-min-screen bg-slate-1'>
-      {props.children}
-      <Toaster />
-    </div>
+    <ThemeContext.Provider value={value}>
+      <div className='w-full h-min-screen bg-slate-1'>
+        {props.children}
+        <Toaster />
+      </div>
+    </ThemeContext.Provider>
   )
 }
