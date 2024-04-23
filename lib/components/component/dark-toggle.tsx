@@ -2,10 +2,14 @@ import { Moon, Sun } from 'lucide-react'
 import { Button } from '../primitive'
 import { useTheme } from './wrapper'
 
-export function DarkModeToggle (): JSX.Element {
+interface DarkModeToggleProps {
+  size?: number
+}
+
+export function DarkModeToggle (props: DarkModeToggleProps): JSX.Element {
   const { theme, setTheme } = useTheme()
 
-  const icon = theme === 'dark' ? <Moon /> : <Sun />
+  const icon = theme === 'dark' ? <Moon size={props.size} /> : <Sun size={props.size} />
 
   return (
     <Button
