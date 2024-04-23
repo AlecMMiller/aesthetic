@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { Toaster } from '../primitive'
 
 interface WrapperProps {
@@ -43,11 +43,13 @@ export function Wrapper (props: WrapperProps): JSX.Element {
     [theme]
   )
 
-  applyTheme(theme)
+  useEffect(() => {
+    applyTheme(theme)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={value}>
-      <div className='w-full h-min-screen bg-slate-1'>
+      <div className='w-full min-h-screen bg-slate-1'>
         {props.children}
         <Toaster />
       </div>

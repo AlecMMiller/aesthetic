@@ -20,7 +20,7 @@ const buttonVariants = cva(
           'border border-input border-slate-7 bg-slate-3 hover:bg-accent-slate-4 active:bg-slate-5 text-slate-11 hover:text-slate-12',
         secondary:
           'bg-blue-7 text-slate-12 hover:bg-blue-10 active:bg-blue-11',
-        ghost: '',
+        ghost: 'hover:bg-slate-4',
         link: 'text-slate-12 underline-offset-4 hover:underline'
       },
       size: {
